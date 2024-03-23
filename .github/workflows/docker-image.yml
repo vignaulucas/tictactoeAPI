@@ -20,8 +20,10 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
+    - name: Run tests
+      run: mvn test
 
-    - name: Build with Maven
+    - name: Build the project
       run: mvn clean package
 
     - name: Set up Docker Buildx
