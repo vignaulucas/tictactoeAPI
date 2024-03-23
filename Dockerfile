@@ -6,6 +6,5 @@ EXPOSE 8080
 
 CMD ["java", "-jar", "app.jar"]
 
-FROM openjdk:latest
 
 
