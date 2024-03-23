@@ -25,7 +25,7 @@ public class GameController {
     private GameService gameService;
 
     // Endpoint pour initialiser une nouvelle partie
-    @CrossOrigin(origins = "https://tic-tac-toe-i7hg.onrender.com")
+    @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping("/newGame")
     public ResponseEntity<Game> newGame(@RequestBody Game game) {
         String board = "         ";
