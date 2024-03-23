@@ -1,6 +1,6 @@
 FROM openjdk:latest
 
-COPY target/tic_tac_toe-api-*.jar app.jar
+COPY target/api-0.0.1-SNAPSHOT.jar app.jar
 
 EXPOSE 8080
 
