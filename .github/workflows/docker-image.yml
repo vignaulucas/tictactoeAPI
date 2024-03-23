@@ -30,4 +30,3 @@ jobs:
           file: Dockerfile
           push: true
           tags: lucvgn/tic-tac-toe-api:d74f8cd1c8e427efa4d6f75016888b4bdbe6b62f
-
