@@ -25,7 +25,6 @@ public class GameController {
     private GameService gameService;
 
     // Endpoint pour initialiser une nouvelle partie
-    @CrossOrigin(origins = "https://tic-tac-toe-i7hg.onrender.com")
     @PostMapping("/newGame")
     public ResponseEntity<Game> newGame(@RequestBody Game game) {
         String board = "         ";
@@ -50,7 +49,6 @@ public class GameController {
     }
 
     // Endpoint pour jouer un coup
-    @CrossOrigin(origins = "https://tic-tac-toe-i7hg.onrender.com")
     @PostMapping("/playMove")
     public ResponseEntity<Game> playMove(@RequestBody Move move) {
         // La logique pour jouer le coup, peut-être dans le service
@@ -60,7 +58,6 @@ public class GameController {
 
 
     // Endpoint pour vérifier l'état de la victoire
-    @CrossOrigin(origins = "https://tic-tac-toe-i7hg.onrender.com")
     @GetMapping("/checkVictory/{gameId}")
     public ResponseEntity<String> checkVictory(@PathVariable Long gameId) {
         String result = gameService.checkVictory(gameId);
@@ -72,7 +69,6 @@ public class GameController {
     }
 
     // Endpoint pour changer le current player (si son tour depasse 30 sec)
-    @CrossOrigin(origins = "https://tic-tac-toe-i7hg.onrender.com")
     @GetMapping("/changePlayer/{gameId}")
     public ResponseEntity<Game> changePlayer(@PathVariable Long gameId) {
         Game updatedGame = gameService.changePlayer(gameId);
