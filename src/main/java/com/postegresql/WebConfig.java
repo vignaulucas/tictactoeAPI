@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
 
-    @Value("${TIC_TAC_TOE_ORIGIN:http://localhost:3000}")
+    @Value("${TIC_TAC_TOE_ORIGIN:https://tictactoe-x6md.onrender.com}")
     private String origin;
 
     @Override
